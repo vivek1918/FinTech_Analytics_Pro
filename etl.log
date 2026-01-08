@@ -1,0 +1,17 @@
+2026-01-08 12:09:25,451 - __main__ - INFO - Connected to database: database/fintech_portfolio.db
+2026-01-08 12:09:25,451 - __main__ - INFO - Starting ETL pipeline...
+2026-01-08 12:09:25,451 - __main__ - INFO - Extracting data from CSV files...
+2026-01-08 12:09:25,470 - __main__ - INFO - Loaded 10000 rows from data_sources/customers.csv
+2026-01-08 12:09:25,513 - __main__ - INFO - Loaded 50000 rows from data_sources/loans.csv
+2026-01-08 12:09:25,653 - __main__ - INFO - Loaded 200000 rows from data_sources/transactions.csv
+2026-01-08 12:09:25,653 - __main__ - INFO - Transforming data...
+2026-01-08 12:09:26,294 - __main__ - INFO - Data transformation completed
+2026-01-08 12:09:26,294 - __main__ - INFO - Loading data to database...
+2026-01-08 12:09:26,337 - __main__ - INFO - Loaded 10000 rows to customers
+2026-01-08 12:09:26,447 - __main__ - INFO - Loaded 50000 rows to loans
+2026-01-08 12:09:27,037 - __main__ - INFO - Loaded 200000 rows to transactions
+2026-01-08 12:09:27,087 - __main__ - INFO - Loaded 50000 rows to risk_features
+2026-01-08 12:09:27,095 - __main__ - INFO - Portfolio summary created
+2026-01-08 12:09:27,096 - __main__ - INFO - Data loading completed successfully
+2026-01-08 12:09:27,206 - __main__ - INFO - Report generated: etl_report.json
+2026-01-08 12:09:27,206 - __main__ - INFO - ETL pipeline completed in 0:00:01.755180

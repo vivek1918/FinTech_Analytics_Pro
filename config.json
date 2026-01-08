@@ -1,0 +1,10 @@
+{
+  "database": {
+    "path": "database/fintech_portfolio.db"
+  },
+  "data_sources": {
+    "customers": "data_sources/customers.csv",
+    "loans": "data_sources/loans.csv",
+    "transactions": "data_sources/transactions.csv"
+  }
+}

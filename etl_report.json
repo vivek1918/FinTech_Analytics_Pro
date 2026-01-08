@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-01-08T12:09:27.096602",
+  "summary": {
+    "customers": {
+      "row_count": 10000,
+      "column_count": 9,
+      "memory_usage_mb": 3.52
+    },
+    "loans": {
+      "row_count": 50000,
+      "column_count": 12,
+      "memory_usage_mb": 16.13
+    },
+    "transactions": {
+      "row_count": 200000,
+      "column_count": 8,
+      "memory_usage_mb": 58.72
+    },
+    "risk_features": {
+      "row_count": 50000,
+      "column_count": 3,
+      "memory_usage_mb": 3.1
+    }
+  }
+}

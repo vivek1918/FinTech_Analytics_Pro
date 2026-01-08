@@ -1,0 +1,56 @@
+2026-01-08 12:02:30,936 - INFO - SQLite database connected: database/fintech_portfolio.db
+2026-01-08 12:02:30,952 - INFO - Starting data extraction...
+2026-01-08 12:02:31,008 - INFO - Loaded 10000 rows from data_sources/customers.csv
+2026-01-08 12:02:31,058 - INFO - Loaded 50000 rows from data_sources/loans.csv
+2026-01-08 12:02:31,251 - INFO - Loaded 200000 rows from data_sources/transactions.csv
+2026-01-08 12:02:31,255 - INFO - Loaded 10000 rows from data_sources/credit_bureau_data.csv
+2026-01-08 12:02:31,255 - INFO - Starting data transformation...
+2026-01-08 12:02:32,345 - INFO - Data transformation completed
+2026-01-08 12:02:32,345 - INFO - Loading data to SQLite database...
+2026-01-08 12:02:32,376 - INFO - Loaded 10000 rows to customers
+2026-01-08 12:02:32,883 - INFO - Loaded 50000 rows to loans
+2026-01-08 12:02:33,431 - INFO - Loaded 200000 rows to transactions
+2026-01-08 12:02:33,478 - INFO - Loaded 50000 rows to risk_features
+2026-01-08 12:02:33,485 - ERROR - Database load failed: no such table: portfolio_summary
+2026-01-08 12:04:18,689 - INFO - SQLite database connected: database/fintech_portfolio.db
+2026-01-08 12:04:18,689 - INFO - Starting data extraction...
+2026-01-08 12:04:18,704 - INFO - Loaded 10000 rows from data_sources/customers.csv
+2026-01-08 12:04:18,756 - INFO - Loaded 50000 rows from data_sources/loans.csv
+2026-01-08 12:04:18,952 - INFO - Loaded 200000 rows from data_sources/transactions.csv
+2026-01-08 12:04:18,962 - INFO - Loaded 10000 rows from data_sources/credit_bureau_data.csv
+2026-01-08 12:04:18,964 - INFO - Starting data transformation...
+2026-01-08 12:04:20,023 - INFO - Data transformation completed
+2026-01-08 12:04:20,023 - INFO - Loading data to SQLite database...
+2026-01-08 12:04:20,048 - INFO - Loaded 10000 rows to customers
+2026-01-08 12:04:20,199 - INFO - Loaded 50000 rows to loans
+2026-01-08 12:04:20,765 - INFO - Loaded 200000 rows to transactions
+2026-01-08 12:04:20,802 - INFO - Loaded 50000 rows to risk_features
+2026-01-08 12:04:20,825 - ERROR - Database load failed: no such table: portfolio_summary
+2026-01-08 12:05:01,114 - INFO - SQLite database connected: database/fintech_portfolio.db
+2026-01-08 12:05:01,114 - INFO - Starting data extraction...
+2026-01-08 12:05:01,134 - INFO - Loaded 10000 rows from data_sources/customers.csv
+2026-01-08 12:05:01,182 - INFO - Loaded 50000 rows from data_sources/loans.csv
+2026-01-08 12:05:01,404 - INFO - Loaded 200000 rows from data_sources/transactions.csv
+2026-01-08 12:05:01,412 - INFO - Loaded 10000 rows from data_sources/credit_bureau_data.csv
+2026-01-08 12:05:01,416 - INFO - Starting data transformation...
+2026-01-08 12:05:02,513 - INFO - Data transformation completed
+2026-01-08 12:05:02,513 - INFO - Loading data to SQLite database...
+2026-01-08 12:05:02,544 - INFO - Loaded 10000 rows to customers
+2026-01-08 12:05:02,692 - INFO - Loaded 50000 rows to loans
+2026-01-08 12:05:03,263 - INFO - Loaded 200000 rows to transactions
+2026-01-08 12:05:03,304 - INFO - Loaded 50000 rows to risk_features
+2026-01-08 12:05:03,324 - ERROR - Database load failed: no such table: portfolio_summary
+2026-01-08 12:05:12,601 - INFO - SQLite database connected: database/fintech_portfolio.db
+2026-01-08 12:05:12,601 - INFO - Starting data extraction...
+2026-01-08 12:05:12,619 - INFO - Loaded 10000 rows from data_sources/customers.csv
+2026-01-08 12:05:12,664 - INFO - Loaded 50000 rows from data_sources/loans.csv
+2026-01-08 12:05:12,867 - INFO - Loaded 200000 rows from data_sources/transactions.csv
+2026-01-08 12:05:12,877 - INFO - Loaded 10000 rows from data_sources/credit_bureau_data.csv
+2026-01-08 12:05:12,883 - INFO - Starting data transformation...
+2026-01-08 12:05:13,929 - INFO - Data transformation completed
+2026-01-08 12:05:13,929 - INFO - Loading data to SQLite database...
+2026-01-08 12:05:13,955 - INFO - Loaded 10000 rows to customers
+2026-01-08 12:05:14,108 - INFO - Loaded 50000 rows to loans
+2026-01-08 12:05:14,635 - INFO - Loaded 200000 rows to transactions
+2026-01-08 12:05:14,683 - INFO - Loaded 50000 rows to risk_features
+2026-01-08 12:05:14,699 - ERROR - Database load failed: no such table: portfolio_summary
