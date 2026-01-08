@@ -138,6 +138,3 @@ This query provides a segment-wise customer overview, including:
         ON c.customer_id = l.customer_id
     GROUP BY c.customer_segment
     ORDER BY customer_count DESC
-
-```
-
