@@ -58,7 +58,21 @@ cd fintech-analytics-dashboard
 ```
 ---
 
-### Sample Query - 
+## 📊 Sample SQL Queries
+
+Below are some **advanced SQL queries** that can be directly executed inside the **FinTech Analytics Dashboard SQL Console** to generate deep financial insights.
+
+---
+
+### 1️⃣ Risk-Adjusted Return on Capital (RAROC) Analysis
+
+This query calculates **RAROC** by risk band by considering:
+- Total loan exposure  
+- Expected interest income  
+- Expected loss from defaulted loans  
+- Payments already collected  
+
+```sql
 WITH loan_payments AS (
     SELECT
         loan_id,
@@ -97,5 +111,4 @@ LEFT JOIN loan_payments lp
     ON l.loan_id = lp.loan_id
 GROUP BY l.risk_band
 ORDER BY raroc_percentage DESC
-LIMIT 1000;
-
+LIMIT 1000
