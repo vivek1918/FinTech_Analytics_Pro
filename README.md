@@ -1,38 +1,7 @@
-﻿# FinTech_Analytics_Pro
-
 # FinTech Analytics Dashboard – Complete Solution
 
 ## 🚀 Overview
 **FinTech Analytics Dashboard** is a comprehensive web-based analytics platform built with **Streamlit** that provides real-time financial data analysis, advanced SQL query capabilities, and rich interactive visualizations for FinTech companies, NBFCs, and analytics teams.
-
----
-
-## 📸 Screenshots
-
-### 📊 Dashboard Main View  
-![Dashboard Main View](https://i.imgur.com/K7FV3gT.png)  
-*Portfolio overview and key financial metrics*
-
-### 📈 Advanced Analytics  
-![Advanced Analytics](https://i.imgur.com/9VwL8Qh.png)  
-*Multi-tab analytics interface with diverse visualizations*
-
-### 💻 SQL Console  
-![SQL Console](https://i.imgur.com/6jPZ4WX.png)  
-*Interactive SQL query editor with live results*
-
-### 🎯 Risk Analysis  
-![Risk Analysis](https://i.imgur.com/M8kY5rS.png)  
-*Risk assessment dashboard with correlation heatmaps*
-
-### 👥 Customer Insights  
-![Customer Insights](https://i.imgur.com/Xc7vJfY.png)  
-*Customer segmentation and behavioral analytics*
-
-### 💰 Performance Metrics  
-![Performance Metrics](https://i.imgur.com/tN2qL3s.png)  
-*Transaction performance and revenue tracking*
-
 ---
 
 ## 🎯 Live Demo
@@ -86,3 +55,47 @@
 ```bash
 git clone https://github.com/yourusername/fintech-analytics-dashboard.git
 cd fintech-analytics-dashboard
+```
+---
+
+### Sample Query - 
+WITH loan_payments AS (
+    SELECT
+        loan_id,
+        SUM(amount) AS total_paid
+    FROM transactions
+    WHERE status = 'SUCCESS'
+    GROUP BY loan_id
+)
+SELECT
+    l.risk_band,
+    COUNT(*) AS loan_count,
+    SUM(l.loan_amount) AS total_exposure,
+    SUM(l.total_interest) AS expected_interest,
+    SUM(
+        CASE
+            WHEN l.current_status = 'DEFAULT'
+            THEN l.loan_amount - COALESCE(lp.total_paid, 0)
+            ELSE 0
+        END
+    ) AS expected_loss,
+    ROUND(
+        (
+            SUM(l.total_interest) -
+            SUM(
+                CASE
+                    WHEN l.current_status = 'DEFAULT'
+                    THEN l.loan_amount - COALESCE(lp.total_paid, 0)
+                    ELSE 0
+                END
+            )
+        ) / SUM(l.loan_amount) * 100,
+        2
+    ) AS raroc_percentage
+FROM loans l
+LEFT JOIN loan_payments lp
+    ON l.loan_id = lp.loan_id
+GROUP BY l.risk_band
+ORDER BY raroc_percentage DESC
+LIMIT 1000;
+
