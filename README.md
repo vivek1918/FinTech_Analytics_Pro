@@ -133,9 +133,11 @@ This query provides a segment-wise customer overview, including:
     AVG(c.annual_income) AS avg_income,
     COUNT(DISTINCT l.loan_id) AS total_loans,
     SUM(l.loan_amount) AS total_borrowed
-FROM customers c
-LEFT JOIN loans l 
-    ON c.customer_id = l.customer_id
-GROUP BY c.customer_segment
-ORDER BY customer_count DESC
+    FROM customers c
+    LEFT JOIN loans l 
+        ON c.customer_id = l.customer_id
+    GROUP BY c.customer_segment
+    ORDER BY customer_count DESC
+
 ```
+
