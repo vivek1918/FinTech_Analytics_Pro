@@ -112,3 +112,30 @@ LEFT JOIN loan_payments lp
 GROUP BY l.risk_band
 ORDER BY raroc_percentage DESC
 LIMIT 1000
+```
+
+---
+
+### 2️⃣ Customer Segmentation & Borrowing Behavior Analysis
+
+This query provides a segment-wise customer overview, including:
+- Number of customers
+- Average credit score
+- Average income
+- Total loans taken
+- Total amount borrowed
+
+  ```sql
+  SELECT 
+    c.customer_segment,
+    COUNT(DISTINCT c.customer_id) AS customer_count,
+    AVG(c.credit_score) AS avg_credit_score,
+    AVG(c.annual_income) AS avg_income,
+    COUNT(DISTINCT l.loan_id) AS total_loans,
+    SUM(l.loan_amount) AS total_borrowed
+FROM customers c
+LEFT JOIN loans l 
+    ON c.customer_id = l.customer_id
+GROUP BY c.customer_segment
+ORDER BY customer_count DESC
+```
